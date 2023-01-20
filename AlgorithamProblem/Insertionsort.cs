@@ -35,6 +35,7 @@ namespace AlgorithamProblem
                 {
                     j--;
 
+
                 }
                 wordsArray[j+1] = key;
             }
