@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,12 +12,12 @@ namespace AlgorithamProblem
     {
         public class Binarysearch
         {
-            public string filePath = @"D:\12.Algorithm Program\AlgorithamProblem\AlgorithamProblem\BinarySearch.json"
+            public string filePath = @"D:\12.Algorithm Program\AlgorithamProblem\AlgorithamProblem\BinarySearch.json";
 
             public void BinarySearchWordCheck(string str)
             {
                 string words = File.ReadAllText(filePath);
-                string word = JsonConverter.DeserializeObject<string>(words);
+                string word = JsonConvert.SerializeObject(words);
 
                 string[] wordsArray = word.Split(',');
                 Array.Sort(wordsArray);
@@ -33,4 +34,5 @@ namespace AlgorithamProblem
 
             }
         }
+    }
 }
