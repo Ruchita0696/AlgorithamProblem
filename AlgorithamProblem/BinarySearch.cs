@@ -1,10 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+
 
 namespace AlgorithamProblem
 {
@@ -17,7 +13,7 @@ namespace AlgorithamProblem
             public void BinarySearchWordCheck(string str)
             {
                 string words = File.ReadAllText(filePath);
-                string word = JsonConvert.SerializeObject(words);
+                string word = JsonConvert.DeserializeObject<string>(words);
 
                 string[] wordsArray = word.Split(',');
                 Array.Sort(wordsArray);
