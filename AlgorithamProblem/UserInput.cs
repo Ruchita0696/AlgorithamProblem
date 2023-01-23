@@ -57,6 +57,16 @@ namespace AlgorithamProblem
                     Anagram anagram = new Anagram();
                     anagram.CheckAnagram(str1, str2);
                     break;
+
+                case 7:
+                    Console.Write("Starting number of range: ");
+                    int start = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Ending number of range : ");
+                    int End = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("The prime numbers between {0} and {1} are : \n", start, End);
+                    PrimeNumber prime = new PrimeNumber();
+                    prime.CheckPrimeNumber(start, End);
+                    break;
             }
         }
     }
