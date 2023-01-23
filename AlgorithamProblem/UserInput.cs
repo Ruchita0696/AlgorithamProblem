@@ -10,13 +10,14 @@ namespace AlgorithamProblem
             Console.WriteLine("Enter - 2. Binary Search ");
             Console.WriteLine("Choose - 3. Insertion Sort ");
             Console.WriteLine("Choose - 4. Bubble Sort ");
+            Console.WriteLine("Choose - 5. Merge Sort ");
 
             Console.Write("\nEnter Selected Number : ");
             int userInput = int.Parse(Console.ReadLine());
 
             switch(userInput)
             {
-                case 0:
+                case 1:
                     Console.Write("\nEnter String for Permutation : ");
                     string str = Console.ReadLine();
                     int Length = str.Length;
@@ -26,21 +27,26 @@ namespace AlgorithamProblem
                     Permutation.IterationPermutation(str); // using iterative Menthod
                     break;
 
-                case 1:
+                case 2:
                     Console.WriteLine("\nEnter the Car Name which you want to search Using Binary Search : ");
                     string cars = Console.ReadLine();
                     BinarySearch search = new BinarySearch();
                     break;
 
-                case 2:
+                case 3:
                     Insertionsort insertion = new Insertionsort();
                     insertion.ArrayData();
                     break;
 
                    
-                case 3:
+                case 4:
                     BubbleSort bubble = new BubbleSort();
                     bubble.ArrayData();
+                    break;
+
+                case 5:
+                    Mergesort merge = new Mergesort();
+                    merge.ArrayData();
                     break;
             }
         }
