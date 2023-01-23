@@ -48,6 +48,15 @@ namespace AlgorithamProblem
                     Mergesort merge = new Mergesort();
                     merge.ArrayData();
                     break;
+
+                case 6:
+                    Console.Write("Enter 1st Word : ");
+                    string str1 = Console.ReadLine();
+                    Console.Write("Enter 2nd Word : ");
+                    string str2 = Console.ReadLine();
+                    Anagram anagram = new Anagram();
+                    anagram.CheckAnagram(str1, str2);
+                    break;
             }
         }
     }
